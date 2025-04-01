@@ -1,3 +1,15 @@
-Compilar: 
-    swipl
-    
+Compilar: swipl arquivo.pl
+
+Recompilar: [arquivo].   
+
+Backtracking: ;
+
+Sair: halt.
+
+Debug:  trace
+    c. : prox chamada
+    s. : salta proximo evento
+    f. : causa falha
+    b. : inicia nova sessao
+    a. : interrompe depuracao
+    notrace. e nodebug. : sair
