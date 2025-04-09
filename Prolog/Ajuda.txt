@@ -13,3 +13,9 @@ Debug:  trace
     b. : inicia nova sessao
     a. : interrompe depuracao
     notrace. e nodebug. : sair
+
+findall : findall(X,seleciona(_,[1,2,3],X),L).
+between(Inicio, Fim, ValoresEntre).
+forall(Controle, Do).
+maplist()
+

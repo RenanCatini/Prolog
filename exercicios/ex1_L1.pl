@@ -1,5 +1,0 @@
-% Fatos
-
-
-
-% Regras
