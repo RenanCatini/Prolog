@@ -1,6 +1,6 @@
 # Prolog Project
 
-Este repositório contém arquivos e pastas relacionados ao projeto desenvolvido em Prolog. Abaixo está uma breve descrição de cada item no diretório principal:
+Este repositório contém arquivos e pastas relacionados as aulas da matéria Prolog. Abaixo está uma breve descrição de cada item no diretório principal:
 
 ## Estrutura do Diretório
 
