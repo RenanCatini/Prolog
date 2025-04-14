@@ -4,23 +4,17 @@ Este repositório contém arquivos e pastas relacionados ao projeto desenvolvido
 
 ## Estrutura do Diretório
 
-- **/src**  
-    Contém os arquivos-fonte do projeto em Prolog.
+- **/exercises**  
+    Contém os arquivos-fonte das soluções resolvidas e os arquivos PDF das listas.
 
-- **/docs**  
-    Inclui documentação adicional, como explicações sobre o funcionamento do projeto e exemplos de uso.
+- **/lesson**  
+    Inclui arquivos-fonte de soluções desenvolvidas em sala de aula, e explicações.
 
-- **/tests**  
-    Arquivos de teste para verificar a funcionalidade e a correção do código.
+- **Plano de Ensino**  
+    Pdf do plano de ensino do professor.
 
-- **README.md**  
-    Este arquivo, que fornece uma visão geral do projeto e sua estrutura.
-
-- **LICENSE**  
-    Arquivo contendo a licença do projeto.
-
-- **.gitignore**  
-    Lista de arquivos e diretórios que devem ser ignorados pelo Git.
+- **Slides de Aula**
+    Pdf dos slides que são usados em sala de aula.
 
 ## Sobre o Projeto
 
