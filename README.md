@@ -16,6 +16,6 @@ Este repositório contém arquivos e pastas relacionados as aulas da matéria Pr
 - **Slides de Aula**
     Pdf dos slides que são usados em sala de aula.
 
-## Sobre o Projeto
+## Sobre o diretório
 
-Este projeto foi desenvolvido como parte do curso no terceiro semestre da Unifal. Ele explora conceitos fundamentais de Prolog e programação lógica.
+Este diretório foi desenvolvido como parte do curso no terceiro semestre da Unifal. Ele explora conceitos fundamentais de Prolog e programação lógica.
