@@ -38,8 +38,17 @@ distancia((X1, Y1), (X2,Y2), D) :-
 
 
 % Exercicio 7: quadrado(X, "elm").
-quadrado(X, EL) :- forall(between(1, X, _), (linha(X, EL), nl)).
-linha(X, EL) :- forall(between(1, X, _), (write(EL), write(' '))).
+quadrado(X,Y) :- quadradoAUX(X,Y,Y).
+
+linha(_,0) :- !.
+linha(X,Y) :-
+    write(X), write(' '), 
+    Y1 is Y - 1, linha(X,Y1).
+
+quadradoAUX(_,0,_) :- !.
+quadradoAUX(X,Y,Z) :-
+    linha(X,Z), nl,
+    Y1 is Y - 1, quadradoAUX(X,Y1,Z).
 
 
 % Exercicio 8:
@@ -51,14 +60,13 @@ elemento_n([_|B], N, X) :-
 
 
 % Exercicio 9:
-media([], 0).
-media(L,M) :- soma(L,S), tamanho(L,T), M is S / T.
-  
-tamanho([], 0).
-tamanho([_|B], T) :- tamanho(B, T1), T is T1 + 1.
+media(X,Y) :- mediaAUX(X,0,0,Y).
 
-soma([], 0).
-soma([A|B], S) :- soma(B, S1), S is S1 + A.
+mediaAUX([],Z,W,Y) :- Y is W / Z.
+mediaAUX([A|B],Z,W,Y) :-
+    W1 is W + A,
+    Z1 is Z + 1,
+    mediaAUX(B,Z1,W1,Y).
 
 
 % Exercicio 10:
@@ -68,8 +76,11 @@ minimo([A|B], R) :- minimo(B,R1), R1 =< A, R is R1.
 
 
 % Exercicio 11:
-intervalo(I, F, L) :- findall(X, between(I,F,X), L).
-
+intervalo(X,Y,[]) :- X > Y.
+intervalo(X,Y,[X|B]) :- 
+    X =< Y,
+    X1 is X + 1, 
+    intervalo(X1,Y,B).
 
 % Exercicio 12: mdc
 
@@ -87,9 +98,20 @@ divisores(N,L) :- findall(Y, (between(1,N,Y), N mod Y =:= 0), L).
 penultimo([A|[_]], A).
 penultimo([_|C], X) :- penultimo(C, X). 
 
-% Extras 2: 
-comprime([A|[A|B]], [A|B]) comprime.
-comprime([_|B], B) :- comprime(B, B).
-comprime([], []).
+% Extras 2:
+maximo(X,[X]).
+maximo(A,[A|B]) :- maximo(X,B), A >= X.
+maximo(X,[A|B]) :- maximo(X,B), A < X.
+
+% Extras 3: 
+comprimento(0,[]).
+comprimento(N,[_|B]) :- comprimento(N1,B), N is N1 + 1.
 
 
+% Extra 4:
+nesimo(0,[A|_],A).
+nesimo(N,[_|B],X) :- N1 is N - 1, nesimo(N1,B,X).
+
+% Extra 5:
+total([],0).
+total([A|B], N) :- total(B,N1), N is N1 + A.
