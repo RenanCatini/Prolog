@@ -19,3 +19,6 @@ between(Inicio, Fim, ValoresEntre).
 forall(Controle, Do).
 maplist()
 
+
+retract(num(X)). 
+    apaga itens da base de dados 
