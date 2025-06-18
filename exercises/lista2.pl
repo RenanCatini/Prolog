@@ -1,4 +1,3 @@
-:- dynamic between/2.
 % Lista 2 de exercícios de Programação Lógica
 
 % Exercicio 1: 
