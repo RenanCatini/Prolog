@@ -48,10 +48,10 @@ estende([OperacaoX-EstadoA|Caminho], [OperacaoY-EstadoB,OperacaoX-EstadoA|Caminh
 % ------------------------------------------------------------------------------------------
 
 % Checa se a posição atual é segura
-seguro([Me, Ce, Md, Cd, _]) :- 
-    (Me >= Ce ; Me == 0), 
-    (Md >= Cd ; Md == 0),
-    Me >= 0, Ce >= 0, Md >= 0, Cd >= 0.
+seguro([Me, Ce, Md, Cd, _]) :-
+    Me >= 0, Ce >= 0, Md >= 0, Cd >= 0,
+    (Me == 0 ; Me >= Ce),
+    (Md == 0 ; Md >= Cd).
 
 % Gera todas as possibilidades de barco.
 movimento(K, Me, Ce, M, C) :-
